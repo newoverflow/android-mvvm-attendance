@@ -14,6 +14,7 @@ import io.github.andres_vasquez.attendacelist.db.entity.PersonEntity;
  * Created by andresvasquez on 6/11/17.
  */
 
+@Database(entities = {PersonEntity.class}, version = 1)
 //TODO Step 6: Set entities
 @TypeConverters(DateConverter.class)
 public abstract class AppDatabase extends RoomDatabase {

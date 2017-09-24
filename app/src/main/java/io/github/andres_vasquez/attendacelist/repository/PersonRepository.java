@@ -12,4 +12,10 @@ import io.github.andres_vasquez.attendacelist.db.entity.PersonEntity;
  */
 public interface PersonRepository {
     //TODO Step 8: Define the data access method
+    LiveData<List<PersonEntity>> getPersonList();
+    LiveData<PersonEntity> getPerson(int personId);
+    void addPerson(PersonEntity person);
+    void updatePerson(PersonEntity person);
+    void deletePerson(PersonEntity person);
+
 }

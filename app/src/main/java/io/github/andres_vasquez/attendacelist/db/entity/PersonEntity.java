@@ -14,9 +14,10 @@ import java.util.Date;
  */
 
 //TODO Step 4: Prepare Person table
-    @Entity(tableName = "Person")
+    @Entity(tableName = "person")
 public class PersonEntity{
     //TODO Step 5: Set id as PrimaryKey Autoincrement
+    @PrimaryKey(autoGenerate = true)
     private int id;
     private String name;
     private boolean student;

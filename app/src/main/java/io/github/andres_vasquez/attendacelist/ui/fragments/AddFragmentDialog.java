@@ -133,6 +133,8 @@ public class AddFragmentDialog extends DialogFragment implements View.OnClickLis
      */
     private void loadPerson() {
         //TODO Step 16: Subscribe single person observer
+        mActivity.personViewModel.getPerson(mPersonId).observe(mActivity, observerPerson);
+
     }
 
 
@@ -164,9 +166,13 @@ public class AddFragmentDialog extends DialogFragment implements View.OnClickLis
 
         if(mPersonId==0){
             //TODO Step 14: Adding create action
+            mActivity.personViewModel.personRepository.addPerson(personEntity);
+
         } else {
             personEntity.setId(mPersonId);
             //TODO Step 15: Adding update action
+            mActivity.personViewModel.personRepository.updatePerson(personEntity);
+
         }
 
         //Close dialog
