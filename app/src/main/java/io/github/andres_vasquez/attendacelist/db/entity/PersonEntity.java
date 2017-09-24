@@ -14,6 +14,7 @@ import java.util.Date;
  */
 
 //TODO Step 4: Prepare Person table
+    @Entity(tableName = "Person")
 public class PersonEntity{
     //TODO Step 5: Set id as PrimaryKey Autoincrement
     private int id;
